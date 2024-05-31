@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+$primary-color: #1faedc;
+$secondary-color: #ef476f;
+$accent-color: #ffd447;
+$bg-color: #f3fafd;
+$text-color: #1d1e2c;
+
+$font-family: "Roboto", sans-serif;
+
+@mixin for-size($range) {
+    $phone-upper-boundary: 600px;
+    $tablet-portrait-upper-boundary: 900px;
+    $tablet-landscape-upper-boundary: 1200px;
+    $desktop-upper-boundary: 1800px;
+
+    @if $range == phone-only {
+        @media (max-width: #{$phone-upper-boundary - 1}) {
+            @content;
+        }
+    } @else if $range == tablet-portrait-up {
+        @media (min-width: $phone-upper-boundary) {
+            @content;
+        }
+    } @else if $range == tablet-landscape-up {
+        @media (min-width: $tablet-portrait-upper-boundary) {
+            @content;
+        }
+    } @else if $range == desktop-up {
+        @media (min-width: $tablet-landscape-upper-boundary) {
+            @content;
+        }
+    } @else if $range == big-desktop-up {
+        @media (min-width: $desktop-upper-boundary) {
+            @content;
+        }
+    }
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: $font-family;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.5em;
+}
+
+ul,
+ol {
+    list-style-position: outside;
+    padding-left: 2em;
+}
+
+ul,
+ol,
+p {
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: decimal;
+}

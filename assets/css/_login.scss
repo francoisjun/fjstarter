@@ -1,0 +1,97 @@
+// https://codex.wordpress.org/Customizing_the_Login_Form#Styling_Your_Login
+
+.login {
+    /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=20a3cb&c2=135b72&gt=r&gd=dtt
+    */
+    background: #20A3CB;
+    background: radial-gradient(at center top, #20A3CB, #1a6b86);
+    background-repeat: no-repeat;
+    max-height: max-content;
+
+    #login {
+        width: 500px;
+        margin-top: 40px;
+        padding-block: 20px;
+        background-color: #fafbfd;
+        border-radius: 20px;
+        box-shadow: 0px 0px 16px 1px rgba(22,52,61,0.70);
+
+        h1 {
+            a {
+                height: 120px;
+                width: 100%;
+                background-size: contain;
+                // descomente a propriedade abaixo para exibir o texto
+                // text-indent: 0px;
+            }
+        }
+
+        #loginform, #lostpasswordform {
+            border: 0;
+            background: none;
+            box-shadow: none;
+            padding-block: 0;
+
+            input {
+                border-radius: 8px;
+                // border: 1px solid #7c7c7d;
+                font-size: 16px;
+                padding-inline: 10px;
+            }
+
+            p {
+                label {}
+                #user_login {}
+            }
+
+            .user-pass-wrap {
+                label {}
+                .wp-pwd {
+                    #user_pass {}
+                }
+            }
+
+            .forgetmenot {
+                #rememberme {
+                    border-radius: 4px;
+                }
+            }
+
+            .submit {
+                #wp-submit {
+                    // background-color: #f0f7ff;
+                }
+            }
+        }
+        #nav {
+            a {
+                // color: #f0f7ff;
+                font-size: 18px;
+            }
+        }
+        #backtoblog {
+            a {
+                // color: #f0f7ff;
+            }
+        }
+    }
+
+    .notice {
+        width: calc(100% - 40px);
+        margin-inline: auto;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+    }
+}
+
+.language-switcher {
+    margin-top: 30px;
+    
+    #language-switcher {
+        label {}
+        select {}
+        input {}
+    }
+}
